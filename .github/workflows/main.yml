@@ -2,8 +2,8 @@ name: Google Sheets Sync
 
 on:
   schedule:
-    # Run every 30 minutes
-    - cron: '*/30 * * * *'
+    # Run every minute
+    - cron: '* * * * *'
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
@@ -29,4 +29,4 @@ jobs:
           echo '${{ secrets.GOOGLE_CREDENTIALS }}' > credentials.json
           
       - name: Run sync script
-        run: python main.py  # Using main.py since that's your filename
+        run: python main.py
