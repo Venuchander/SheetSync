@@ -3,7 +3,7 @@ name: Google Sheets Sync
 on:
   schedule:
     # Run every minute
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
